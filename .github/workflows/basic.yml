@@ -1,0 +1,13 @@
+name: Basic CI Workflow
+
+on:
+  push:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print branch and commit
+        run: |
+          echo "Branch: $GITHUB_REF"
+          echo "Commit SHA: $GITHUB_SHA"
